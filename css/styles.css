@@ -1,32 +1,27 @@
 body {
     margin: 0;
-    font-size: 16px;/*1 rem = 10px*/
+    font-size: 16px; /*1 rem = 10px*/
 }
 
-html{
-	font-size: 62.5%;
-	box-sizing: border-box;/**hack para box model*/
+html {
+    font-size: 62.5%;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* ------------- Header -------------*/
 .encabezado {
     background-color: #C42825;
-    padding: 1rem 0;
+    padding: 2rem 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
 .navegacion {
-    color: aliceblue;
+    color: #fff;
     margin: 0 2rem;
-    font-size: 2rem;
+    font-size: 1.7rem;
     text-decoration: none;
-}
-
-.logo {
-    height: 7rem;
-    width: auto;
 }
 
 .contacto {
@@ -39,122 +34,125 @@ html{
     text-transform: uppercase;
 }
 
+.logo {
+    height: 7rem;
+    width: auto;
+}
+
 .menu-btn {
     display: none;
     background-color: transparent;
     border: none;
-    font-size: 3rem;
+    font-size: 6rem;
     color: #fff;
     cursor: pointer;
     position: absolute;
-    top: 50%; /* Centrado verticalmente */
-    right: 1rem; /* A la derecha */
-    transform: translateY(-50%); /* Ajustar para centrar exactamente */
-    transition: top 0.3s ease; /* Suave transición para cambio de posición */
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    transition: top 0.3s ease;
 }
 
 .menu-btn.active {
-    top: 3rem; /* Se mueve a la parte superior */
+    top: 3rem;
     right: 1rem;
 }
 
-/* Media queries para hacer la barra responsiva */
 @media (max-width: 768px) {
     .encabezado {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: start;
         padding: 1rem;
         position: relative;
     }
 
-    /* Mostrar el botón de menú hamburguesa en pantallas pequeñas */
     .menu-btn {
         display: block;
     }
 
-    /* Ocultar la navegación por defecto */
     nav {
         display: none;
         flex-direction: column;
-        width: 100%;
-        align-items: flex-start;
+        width: 100%;;
+        align-items: start;
         gap: 1rem;
     }
 
-    /* Mostrar la navegación cuando el botón está activo */
     nav.active {
         display: flex;
     }
 
-    /* Apilar los enlaces uno debajo del otro en pantallas pequeñas */
     .navegacion {
         margin: 1rem 0;
-        display: block;
     }
 
-    /* El botón de contacto se ajusta para verse igual que los demás enlaces */
     .contacto {
         background-color: transparent;
-        color: aliceblue;
+        color: #174A82;
         padding: 0;
         border-radius: 0;
         font-size: 2rem;
-    }
+        margin: 0 0 1rem 0;
+        text-transform: uppercase;
+        font-weight: bold;
+}
 }
 
-/* Ocultar navegación por defecto en pantallas pequeñas */
-@media (max-width: 768px) {
-    nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        align-items: flex-start;
-        gap: 1rem;
-    }
-
-    /* Mostrar la navegación cuando se active la clase .active */
-    nav.active {
-        display: flex;
-    }
-}
-
-/* Clase para ocultar el logo */
 .hidden {
     display: none;
 }
 
-/* Responsividad y menú */
-@media (max-width: 768px) {
-    nav {
-        display: none;
+
+/*------------ Sección principal ------------*/
+
+.divPrincipal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem;
+}
+.contenidoPrincipal {
+    width: 40%;
+    padding: 0 5rem;
+}
+
+.imagenC {
+    height: 70rem;
+}
+
+@media (max-width: 1770px) {
+    .divPrincipal{
         flex-direction: column;
-        width: 100%;
-        align-items: flex-start;
-        gap: 1rem;
+        padding: 2rem;
     }
-
-    nav.active {
-        display: flex;
+    .contenidoPrincipal {
+        width: 80%;
     }
-}
-
-/*<! --------------------- nueva sección ---------------- >*/
-
-.seccionPrincipal{
-    margin: 0 15rem;
+    .imagenC {
+        height: 65rem;
+        width: auto;
+    }
 }
 
 @media (max-width: 768px) {
-    .seccionPrincipal{
-        margin: 0 4rem;
+    .divPrincipal{
+        flex-direction: column;
+    }
+    .contenidoPrincipal {
+        width: 86%;
+    }
+    .imagenC {
+        height: 40rem;
+        width: auto;
     }
 }
 
-.contenido {
+.tituloSeccion {
     font-size: 4rem;
+    color: #C42825;
 }
 
-.contenido-texto {
+.parrafoPrincipal {
     font-size: 2rem;
 }
 
@@ -167,15 +165,21 @@ html{
     background-color: #C42825;
     color: #fff;
     border: .2rem solid #C42825;
-    padding: 1.3rem 3rem;
-    border-radius: 1rem;
+    padding: 1.3rem 4.5rem;
     margin-right: 3rem;
+    border-radius: 1rem;
+    width: 50%;
+
 }
+
 .btn-contacto {
     text-decoration: none;
+    background-color: #fff;
     color: #C42825;
     border: .2rem solid #C42825;
     padding: 1.3rem 4.5rem;
     border-radius: 1rem;
-    
+    width: 50%;
+
 }
+

@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     const menuBtn = document.querySelector('.menu-btn');
     const nav = document.querySelector('nav');
-    const logo = document.querySelector('img'); // Seleccionamos el logo
+    const logo = document.querySelector('img');
 
     menuBtn.addEventListener('click', function() {
-        menuBtn.classList.toggle('active'); // Toggle para cambiar la posición del botón
+        menuBtn.classList.toggle('active');
         nav.classList.toggle('active');
-        logo.classList.toggle('hidden'); // Ocultamos o mostramos el logo
-    });
-});
+        logo.classList.toggle('hidden');
+    })
+})
