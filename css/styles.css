@@ -183,3 +183,159 @@ html {
 
 }
 
+/*------------- segunda seccion ----------- */
+
+.segundaSeccion {
+    display: flex;
+    flex-direction: column;
+    padding: 0 22rem;
+}
+
+.contenidoDos, .contenidoDosInverso {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.contenedorHijo {
+    width: 40%;
+}
+
+.tituloDos {
+    font-size: 3.5rem;
+    color: #C42825;
+}
+
+.parrafoSeccion {
+    font-size: 1.8rem;
+
+}
+
+.imagenCon {
+    height: 60rem;
+}
+
+.btnContenedorDos {
+    margin: 5rem 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-verPortafolio {
+    text-decoration: none;
+   background-color: #fff;
+    color: #C42825;
+    border: .2rem solid #C42825;
+    padding: 1.3rem 3rem;
+    margin-right: 3rem;
+    border-radius: 1rem;
+    width: 50%;
+    text-align: center;
+
+}
+
+.btn-contactoDos {
+    text-decoration: none;
+    background-color: #C42825;
+    color: #fff;
+    border: .2rem solid #C42825;
+    padding: 1.3rem 4rem;
+    border-radius: 1rem;
+    width: 50%;
+    text-align: center;
+}
+
+@media ( max-width: 1069px) {
+    .segundaSeccion {
+        display: block;
+        width: 80%;
+        padding: 0 5rem;
+    }
+
+    .contenidoDos {
+        flex-direction: column;
+    }
+
+    .contenidoDosInverso {
+        flex-direction: column-reverse;
+    }
+
+    .contenedorHijo {
+        width: 100%;
+    }
+    .imagenCon {
+        height: 40rem;
+        width: auto;
+    }
+}
+
+/*---------- Formulario -------------*/
+
+.seccionFormulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    padding: 2rem;
+}
+
+.formulario {
+    padding: 6rem;
+    width: 27%;
+    border: .3rem solid #C42825;
+    border-radius: 1rem;
+}
+
+.contenidoFor {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.tituloFor {
+    color: #C42825;
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+.label {
+    color: #C42825;
+    font-size: 1.7;
+    margin-bottom: .6rem;
+}
+.input {
+    height: 3rem;
+}
+ .area {
+    height: 15rem;
+ }
+
+ .btnEnviarFor {
+    text-align: center;
+    margin-top: 7rem;
+ }
+
+ .btnEnviar {
+    background-color: #C42825;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1rem 5rem;
+    border-radius: 1rem;
+}
+
+@media ( max-width: 1049px) {
+    .formulario {
+        padding: 6rem;
+        width: 50%;
+    }
+}
+
+@media ( max-width: 768px) {
+    .formulario {
+        padding: 6rem;
+        width: 90%;
+    }
+}
